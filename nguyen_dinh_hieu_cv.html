@@ -1,0 +1,1514 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nguyen Dinh Hieu | Flutter Developer CV</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              mono: ['"JetBrains Mono"', "monospace"],
+            },
+            boxShadow: {
+              "hard-sm": "3px 3px 0px 0px #000000",
+              hard: "5px 5px 0px 0px #000000",
+              "hard-lg": "8px 8px 0px 0px #000000",
+              "hard-xl": "12px 12px 0px 0px #000000",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        background-color: #fcfcfc;
+        color: #000000;
+        font-family: "Plus Jakarta Sans", sans-serif;
+
+        background-size: 24px 24px;
+      }
+
+      .brutal-card {
+        background-color: #ffffff;
+        border: 3px solid #000000;
+        box-shadow: 6px 6px 0px 0px #000000;
+        transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .brutal-card:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: 9px 9px 0px 0px #000000;
+      }
+
+      .brutal-btn {
+        background-color: #ffffff;
+        border: 2px solid #000000;
+        box-shadow: 4px 4px 0px 0px #000000;
+        transition: all 0.1s ease-in-out;
+        font-weight: 700;
+      }
+
+      .brutal-btn:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0px 0px #000000;
+      }
+
+      .brutal-btn:active {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px 0px #000000;
+      }
+
+      .brutal-badge {
+        background-color: #000000;
+        color: #ffffff;
+        border: 2px solid #000000;
+        font-family: "JetBrains Mono", monospace;
+      }
+
+      .brutal-pill {
+        background-color: #ffffff;
+        border: 2px solid #000000;
+        box-shadow: 3px 3px 0px 0px #000000;
+        font-family: "JetBrains Mono", monospace;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #ffffff;
+        border-left: 2px solid #000000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #000000;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen antialiased text-black relative">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 px-4 py-4 sm:px-8 bg-white/90 backdrop-blur-md border-b-4 border-black"
+    >
+      <nav class="max-w-6xl mx-auto flex items-center justify-between">
+        <!-- Brand / Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div
+            class="w-11 h-11 bg-black text-white border-2 border-black font-extrabold text-xl flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] group-hover:-translate-y-0.5 transition-transform"
+          >
+            NDH
+          </div>
+          <div>
+            <span
+              class="font-extrabold tracking-tight text-black block text-base uppercase"
+              >Nguyen Dinh Hieu</span
+            >
+            <span
+              class="text-xs font-mono font-bold bg-black text-white px-1.5 py-0.5"
+              >INTERN FLUTTER DEV</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-2 font-bold text-sm">
+          <a
+            href="#about"
+            class="px-4 py-2 hover:bg-black hover:text-white border-2 border-transparent hover:border-black transition-all"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="px-4 py-2 hover:bg-black hover:text-white border-2 border-transparent hover:border-black transition-all"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="px-4 py-2 hover:bg-black hover:text-white border-2 border-transparent hover:border-black transition-all"
+            >Projects</a
+          >
+          <a
+            href="#experience"
+            class="px-4 py-2 hover:bg-black hover:text-white border-2 border-transparent hover:border-black transition-all"
+            >Experience & Edu</a
+          >
+        </div>
+
+        <!-- Action CTA -->
+        <div class="flex items-center gap-3">
+          <a
+            href="#contact"
+            class="brutal-btn px-4 py-2 text-xs sm:text-sm bg-black text-white hover:bg-white hover:text-black"
+          >
+            Let's Connect
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobileMenuBtn"
+            class="md:hidden brutal-btn p-2 text-black"
+            aria-label="Toggle Menu"
+          >
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Drawer -->
+      <div
+        id="mobileDrawer"
+        class="hidden md:hidden mt-4 p-4 bg-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex-col gap-2 font-bold text-sm"
+      >
+        <a
+          href="#about"
+          class="mobile-link p-3 border-2 border-black hover:bg-black hover:text-white"
+          >About</a
+        >
+        <a
+          href="#skills"
+          class="mobile-link p-3 border-2 border-black hover:bg-black hover:text-white"
+          >Skills</a
+        >
+        <a
+          href="#projects"
+          class="mobile-link p-3 border-2 border-black hover:bg-black hover:text-white"
+          >Projects</a
+        >
+        <a
+          href="#experience"
+          class="mobile-link p-3 border-2 border-black hover:bg-black hover:text-white"
+          >Experience & Edu</a
+        >
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-20 space-y-20">
+      <!-- SECTION 1: HERO SECTION -->
+      <section
+        id="hero"
+        class="pt-6 pb-12 text-center flex flex-col items-center"
+      >
+        <!-- Status Badge -->
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 brutal-badge text-xs mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wider"
+        >
+          <span class="w-3 h-3 rounded-full bg-white animate-pulse"></span>
+          <span>Open for Internship & Junior Opportunities</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1
+          class="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-black mb-6"
+        >
+          Nguyen Dinh Hieu
+        </h1>
+
+        <!-- Primary Stack Highlight Banner -->
+        <div
+          class="inline-flex items-center gap-3 px-5 py-2.5 bg-black text-white border-2 border-black font-mono text-sm font-black shadow-[5px_5px_0px_0px_rgba(0,0,0,0.2)] mb-6"
+        >
+          <div class="flex items-center gap-1.5 text-white">
+            <!-- Flutter -->
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
+              alt="Flutter"
+              class="w-5 h-5"
+            />
+            <span>FLUTTER</span>
+          </div>
+
+          <span>&</span>
+
+          <div class="flex items-center gap-1.5 text-white">
+            <!-- Dart -->
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg"
+              alt="Dart"
+              class="w-4 h-4"
+            />
+            <span>DART</span>
+          </div>
+        </div>
+
+        <p
+          class="text-xl sm:text-2xl font-extrabold text-black mb-6 max-w-3xl border-b-4 border-black pb-4"
+        >
+          Intern Flutter Developer building high-performance, offline-first &
+          cross-platform applications.
+        </p>
+
+        <p
+          class="text-base sm:text-lg font-medium text-slate-800 max-w-2xl mb-10 leading-relaxed"
+        >
+          Top 10 CS Student & 2nd Prize Winner at DLU Code Challenge.
+          Specializing in clean SQLite offline architectures, Supabase
+          integrations, and modular state management.
+        </p>
+
+        <!-- CTA Action Row -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
+          <a
+            href="#projects"
+            class="brutal-btn px-8 py-4 bg-black text-white text-base hover:bg-white hover:text-black flex items-center gap-3"
+          >
+            <span>Explore Projects</span>
+            <i class="fa-solid fa-arrow-down text-sm"></i>
+          </a>
+          <a
+            href="#contact"
+            class="brutal-btn px-8 py-4 bg-white text-black text-base hover:bg-black hover:text-white flex items-center gap-3"
+          >
+            <span>Contact Info</span>
+            <i class="fa-solid fa-paper-plane text-sm"></i>
+          </a>
+        </div>
+
+        <!-- Quick Contact Pills -->
+        <div
+          class="flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm font-mono font-bold"
+        >
+          <a
+            href="mailto:dihieu2407@gmail.com"
+            class="brutal-pill px-4 py-2.5 hover:bg-black hover:text-white transition-all flex items-center gap-2"
+          >
+            <i class="fa-solid fa-envelope"></i>
+            <span>dihieu2407@gmail.com</span>
+          </a>
+          <a
+            href="tel:+84823777631"
+            class="brutal-pill px-4 py-2.5 hover:bg-black hover:text-white transition-all flex items-center gap-2"
+          >
+            <i class="fa-solid fa-phone"></i>
+            <span>+84 823 777 631 (Zalo)</span>
+          </a>
+          <a
+            href="https://github.com/gsb-b60"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="brutal-pill px-4 py-2.5 hover:bg-black hover:text-white transition-all flex items-center gap-2"
+          >
+            <i class="fa-brands fa-github"></i>
+            <span>github.com/gsb-b60</span>
+          </a>
+          <div
+            class="brutal-pill px-4 py-2.5 bg-black text-white flex items-center gap-2"
+          >
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Da Lat & TP.HCM</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: ABOUT ME & METRICS -->
+      <section id="about" class="scroll-mt-28">
+        <div class="flex items-center gap-3 mb-8">
+          <div
+            class="w-10 h-10 bg-black text-white font-black text-xl flex items-center justify-center border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+          >
+            01
+          </div>
+          <h2 class="text-3xl font-black text-black uppercase tracking-tight">
+            About Me
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Summary Card -->
+          <div
+            class="lg:col-span-2 brutal-card p-8 flex flex-col justify-between"
+          >
+            <div>
+              <div class="inline-block brutal-badge px-3 py-1 text-xs mb-4">
+                ENGINEERING PROFILE
+              </div>
+              <h3 class="text-2xl font-black text-black uppercase mb-4">
+                Self-Motivated & Achievement Driven
+              </h3>
+              <p class="text-black font-medium leading-relaxed mb-6">
+                I am a self-motivated Flutter Developer with hands-on experience
+                independently architecting and building mobile applications from
+                scratch. My technical repertoire includes fully offline
+                SQLite-driven apps with complex data import pipelines as well as
+                dynamic full-stack solutions integrating Supabase.
+              </p>
+              <p class="text-black font-medium leading-relaxed mb-6">
+                Recognized as a
+                <strong class="underline decoration-4">Top 10 student</strong>
+                in my academic cohort and winner of the
+                <strong class="underline decoration-4"
+                  >2nd Prize at the DLU Code Challenge</strong
+                >, I am eager to contribute clean, scalable code and modern
+                software engineering practices to a professional development
+                team.
+              </p>
+            </div>
+
+            <!-- Highlight Metrics -->
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 border-t-4 border-black"
+            >
+              <div
+                class="p-4 border-2 border-black bg-slate-50 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+              >
+                <span class="block text-3xl font-black text-black font-mono"
+                  >3.1/4.0</span
+                >
+                <span class="text-xs font-bold uppercase text-slate-700"
+                  >Cumulative GPA</span
+                >
+              </div>
+              <div
+                class="p-4 border-2 border-black bg-slate-50 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+              >
+                <span class="block text-2xl sm:text-3xl font-black text-black"
+                  >2nd Prize</span
+                >
+                <span class="text-xs font-bold uppercase text-slate-700"
+                  >DLU Code Challenge</span
+                >
+              </div>
+              <div
+                class="p-4 border-2 border-black bg-black text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,0.4)] col-span-2 sm:col-span-1"
+              >
+                <span class="block text-3xl font-black font-mono">TOP 10</span>
+                <span class="text-xs font-bold uppercase text-slate-300"
+                  >Class Rank</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Card -->
+          <div
+            class="brutal-card p-8 flex flex-col justify-between bg-slate-50"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="brutal-badge px-3 py-1 text-xs">2023 - 2027</span>
+                <i class="fa-solid fa-graduation-cap text-black text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-black text-black uppercase mb-1">
+                Dalat University
+              </h3>
+              <p class="text-black font-bold text-sm mb-4">
+                Bachelor of Engineering in IT
+              </p>
+              <p
+                class="text-xs font-mono font-bold text-slate-700 mb-6 flex items-center gap-2 border-b-2 border-black pb-2"
+              >
+                <i class="fa-solid fa-location-dot"></i> Da Lat, Lam Dong
+              </p>
+
+              <div class="space-y-3 text-sm font-bold text-black">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-square-check"></i>
+                  <span>Software Engineering Principles</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-square-check"></i>
+                  <span>Data Structures & Algorithms</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-square-check"></i>
+                  <span>Database Systems & SQL</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="mt-8 pt-4 border-t-2 border-black flex items-center justify-between text-xs font-mono font-bold"
+            >
+              <span>VIETNAMESE: NATIVE</span>
+              <span>ENGLISH: INTERMEDIATE</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: SKILLS SPOTLIGHT -->
+      <section id="skills" class="scroll-mt-28">
+        <div
+          class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 bg-black text-white font-black text-xl flex items-center justify-center border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+            >
+              02
+            </div>
+            <div>
+              <h2
+                class="text-3xl font-black text-black uppercase tracking-tight"
+              >
+                Skills & Tech Stack
+              </h2>
+            </div>
+          </div>
+
+          <!-- Skill Filter Tabs -->
+          <div class="flex flex-wrap gap-2" id="skillFilterContainer">
+            <button
+              class="skill-tab-btn brutal-btn px-4 py-1.5 text-xs bg-black text-white"
+              data-category="all"
+            >
+              ALL
+            </button>
+            <button
+              class="skill-tab-btn brutal-btn px-4 py-1.5 text-xs bg-white text-black"
+              data-category="languages"
+            >
+              LANGUAGES
+            </button>
+            <button
+              class="skill-tab-btn brutal-btn px-4 py-1.5 text-xs bg-white text-black"
+              data-category="frameworks"
+            >
+              FRAMEWORKS
+            </button>
+            <button
+              class="skill-tab-btn brutal-btn px-4 py-1.5 text-xs bg-white text-black"
+              data-category="backend"
+            >
+              BACKEND & DB
+            </button>
+            <button
+              class="skill-tab-btn brutal-btn px-4 py-1.5 text-xs bg-white text-black"
+              data-category="tools"
+            >
+              TOOLS
+            </button>
+          </div>
+        </div>
+
+        <!-- Skills Grid -->
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+          id="skillsGrid"
+        >
+          <!-- DART (PRIMARY FEATURED) -->
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group bg-black text-white border-4 border-black ring-2 ring-black relative overflow-hidden"
+            data-category="languages"
+          >
+            <span
+              class="absolute top-1 right-1 bg-white text-black font-mono font-black text-[9px] px-1 py-0.5 border border-black"
+              >★ CORE</span
+            >
+            <div
+              class="w-12 h-12 rounded-none bg-white text-black border-2 border-black flex items-center justify-center text-xl mb-3 font-black shadow-[3px_3px_0px_0px_rgba(255,255,255,0.3)]"
+            >
+              <!-- Custom Dart SVG Logo -->
+              <svg class="w-7 h-7 fill-current text-black" viewBox="0 0 24 24">
+                <path
+                  d="M4.105 3.122A1.99 1.99 0 0 0 2.8 3.766L2.247 4.32a.78.78 0 0 0 0 1.103l2.25 2.25 4.39-4.391a.78.78 0 0 0 0-1.103L8.333 1.625a1.99 1.99 0 0 0-1.408-.586c-.53 0-1.039.211-1.414.586L4.105 3.122zM1.144 8.214l1.103 1.103 12.352 12.352c.305.305.719.476 1.152.476h5.362a.78.78 0 0 0 .78-.78v-5.362c0-.433-.171-.847-.476-1.152L9.065 2.5 1.144 8.214zm13.102 2.768L6.892 3.628l2.678-2.678a3.536 3.536 0 0 1 2.503-1.037c.94 0 1.84.372 2.503 1.037l4.586 4.586c1.38 1.38 1.38 3.62 0 5L14.246 10.982z"
+                />
+              </svg>
+            </div>
+            <span
+              class="font-black text-base uppercase tracking-wider text-white"
+              >Dart</span
+            >
+            <span
+              class="text-[10px] font-mono font-bold mt-1 bg-white text-black px-1.5 py-0.5"
+              >PRIMARY LANG</span
+            >
+          </div>
+
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="languages"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-brands fa-js"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">JavaScript</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >LANGUAGE</span
+            >
+          </div>
+
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="languages"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-brands fa-js-square"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">TypeScript</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >LANGUAGE</span
+            >
+          </div>
+
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="languages"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">Python</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >LANGUAGE</span
+            >
+          </div>
+
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="languages"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-solid fa-hashtag"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">C#</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >LANGUAGE</span
+            >
+          </div>
+
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="languages"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">Java</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >LANGUAGE</span
+            >
+          </div>
+
+          <!-- FLUTTER (PRIMARY FEATURED FRAMEWORK) -->
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group bg-black text-white border-4 border-black ring-2 ring-black relative overflow-hidden"
+            data-category="frameworks"
+          >
+            <span
+              class="absolute top-1 right-1 bg-white text-black font-mono font-black text-[9px] px-1 py-0.5 border border-black"
+              >★ MAIN</span
+            >
+            <div
+              class="w-12 h-12 rounded-none bg-white text-black border-2 border-black flex items-center justify-center text-xl mb-3 font-black shadow-[3px_3px_0px_0px_rgba(255,255,255,0.3)]"
+            >
+              <!-- Official Flutter Vector SVG Icon -->
+              <svg class="w-7 h-7 fill-current text-black" viewBox="0 0 24 24">
+                <path
+                  d="M14.314 0L2.3 12 6 15.7 21.686 0h-7.372zM14.314 11.725L8.286 17.75 12 21.464l6.029-6.025-3.715-3.714zM21.686 24l-6.029-6.025 3.715-3.714L24 18.975 21.686 24z"
+                />
+              </svg>
+            </div>
+            <span
+              class="font-black text-base uppercase tracking-wider text-white"
+              >Flutter</span
+            >
+            <span
+              class="text-[10px] font-mono font-bold mt-1 bg-white text-black px-1.5 py-0.5"
+              >PRIMARY FRAMEWORK</span
+            >
+          </div>
+
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="frameworks"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">React Native</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >MOBILE</span
+            >
+          </div>
+
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="frameworks"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">React</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >FRONTEND</span
+            >
+          </div>
+
+          <!-- Backend & Databases -->
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="backend"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-brands fa-node-js"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">Node.js</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >BACKEND</span
+            >
+          </div>
+
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="backend"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-solid fa-cube"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">.NET</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >BACKEND</span
+            >
+          </div>
+
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="backend"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">PostgreSQL</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >RELATIONAL DB</span
+            >
+          </div>
+
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="backend"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">MongoDB</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >NOSQL DB</span
+            >
+          </div>
+
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="backend"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-solid fa-hard-drive"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">SQLite</span>
+            <span class="text-[10px] font-mono font-bold text-black mt-1"
+              >OFFLINE DB</span
+            >
+          </div>
+
+          <!-- Tools -->
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="tools"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-brands fa-git-alt"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">Git</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >VERSION CONTROL</span
+            >
+          </div>
+
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group"
+            data-category="tools"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-brands fa-docker"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">Docker</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >CONTAINER</span
+            >
+          </div>
+
+          <div
+            class="skill-card brutal-card p-4 flex flex-col items-center text-center group border-dashed"
+            data-category="tools"
+          >
+            <div
+              class="w-10 h-10 rounded-none bg-black text-white flex items-center justify-center text-xl mb-3"
+            >
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <span class="font-extrabold text-sm uppercase">Kong Gateway</span>
+            <span class="text-[10px] font-mono text-slate-600 mt-1"
+              >LEARNING</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: PROJECTS SPOTLIGHT -->
+      <section id="projects" class="scroll-mt-28">
+        <div class="flex items-center gap-3 mb-8">
+          <div
+            class="w-10 h-10 bg-black text-white font-black text-xl flex items-center justify-center border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+          >
+            03
+          </div>
+          <div>
+            <h2 class="text-3xl font-black text-black uppercase tracking-tight">
+              Featured Projects
+            </h2>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- PROJECT 1: Totoki Edu -->
+          <div
+            class="brutal-card p-8 flex flex-col justify-between relative group"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="brutal-badge px-3 py-1 text-xs"
+                  >NOV 2025 - JAN 2026</span
+                >
+                <span
+                  class="font-mono text-xs font-extrabold border-2 border-black px-2 py-0.5"
+                  >SOLO PROJECT</span
+                >
+              </div>
+
+              <!-- Icon & Title -->
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-14 h-14 bg-black text-white border-2 border-black flex items-center justify-center text-2xl font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)]"
+                >
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-black uppercase text-black">
+                    Totoki Edu
+                  </h3>
+                  <p class="text-xs font-mono font-bold text-slate-700">
+                    Flutter • SQLite • Anki Engine
+                  </p>
+                </div>
+              </div>
+
+              <p class="text-sm font-medium text-black mb-6 leading-relaxed">
+                Vocabulary application powered by Anki SM-2 Spaced Repetition
+                Algorithm (SRS), mini-games, and IELTS modules. Engineered with
+                a strict offline-first architecture.
+              </p>
+
+              <!-- Tech Badges -->
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="brutal-pill px-3 py-1 text-xs bg-black text-white font-black"
+                  >★ Flutter</span
+                >
+                <span
+                  class="brutal-pill px-3 py-1 text-xs bg-black text-white font-black"
+                  >★ Dart</span
+                >
+                <span class="brutal-pill px-3 py-1 text-xs">SQLite</span>
+                <span class="brutal-pill px-3 py-1 text-xs">Provider</span>
+                <span class="brutal-pill px-3 py-1 text-xs"
+                  >Anki .apkg Engine</span
+                >
+                <span class="brutal-pill px-3 py-1 text-xs">SM-2 SRS</span>
+              </div>
+
+              <!-- Highlights List -->
+              <ul
+                class="space-y-3 text-xs font-medium text-black mb-8 border-t-2 border-black pt-4"
+              >
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-square-check text-black mt-0.5 text-sm"
+                  ></i>
+                  <span
+                    >Engineered custom Anki <b>.apkg import pipeline</b> with
+                    SQLite/JSON parsing, extracting media & mapping 20+
+                    fields.</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-square-check text-black mt-0.5 text-sm"
+                  ></i>
+                  <span
+                    >Architected <b>3-layer architecture</b> using SQLite for
+                    robust offline-first data persistence.</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-square-check text-black mt-0.5 text-sm"
+                  ></i>
+                  <span
+                    >Created reusable lesson orchestration system with
+                    <b>Provider, ChangeNotifier, and 8 specialized mixins</b
+                    >.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Action Trigger -->
+            <button
+              onclick="openModal('totoki')"
+              class="brutal-btn w-full py-3 text-sm uppercase bg-black text-white hover:bg-white hover:text-black flex items-center justify-center gap-2"
+            >
+              <span>Architecture Deep Dive</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+
+          <!-- PROJECT 2: OnTrain -->
+          <div
+            class="brutal-card p-8 flex flex-col justify-between relative group bg-slate-50"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="brutal-badge px-3 py-1 text-xs"
+                  >FLUTTER + SUPABASE</span
+                >
+                <span
+                  class="font-mono text-xs font-extrabold border-2 border-black px-2 py-0.5 bg-white"
+                  >SOLO PROJECT</span
+                >
+              </div>
+
+              <!-- Icon & Title -->
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-14 h-14 bg-black text-white border-2 border-black flex items-center justify-center text-2xl font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)]"
+                >
+                  <i class="fa-solid fa-dumbbell"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-black uppercase text-black">
+                    OnTrain
+                  </h3>
+                  <p class="text-xs font-mono font-bold text-slate-700">
+                    Flutter • Supabase RPC • PostgreSQL
+                  </p>
+                </div>
+              </div>
+
+              <p class="text-sm font-medium text-black mb-6 leading-relaxed">
+                Personal training booking platform seamlessly connecting clients
+                with professional personal trainers, handling real-time
+                schedules and transaction flows.
+              </p>
+
+              <!-- Tech Badges -->
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="brutal-pill px-3 py-1 text-xs bg-black text-white font-black"
+                  >★ Flutter</span
+                >
+                <span
+                  class="brutal-pill px-3 py-1 text-xs bg-black text-white font-black"
+                  >★ Dart</span
+                >
+                <span class="brutal-pill px-3 py-1 text-xs">Supabase RPC</span>
+                <span class="brutal-pill px-3 py-1 text-xs">PostgreSQL</span>
+                <span class="brutal-pill px-3 py-1 text-xs">Provider DI</span>
+                <span class="brutal-pill px-3 py-1 text-xs">Workflows</span>
+              </div>
+
+              <!-- Highlights List -->
+              <ul
+                class="space-y-3 text-xs font-medium text-black mb-8 border-t-2 border-black pt-4"
+              >
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-square-check text-black mt-0.5 text-sm"
+                  ></i>
+                  <span
+                    >Engineered
+                    <b>atomic booking logic with Supabase RPCs</b> ensuring data
+                    consistency across parallel transactions.</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-square-check text-black mt-0.5 text-sm"
+                  ></i>
+                  <span
+                    >Implemented full-lifecycle state workflows for
+                    <b
+                      >cancellations, dispute/refund handling, and platform
+                      commissions</b
+                    >.</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-square-check text-black mt-0.5 text-sm"
+                  ></i>
+                  <span
+                    >Architected clean 3-layer Flutter application with Provider
+                    dependency injection and type-safe data models.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Action Trigger -->
+            <button
+              onclick="openModal('ontrain')"
+              class="brutal-btn w-full py-3 text-sm uppercase bg-black text-white hover:bg-white hover:text-black flex items-center justify-center gap-2"
+            >
+              <span>Architecture Deep Dive</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: EXPERIENCE & CERTIFICATIONS TIMELINE -->
+      <section id="experience" class="scroll-mt-28">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Left Column: Experience -->
+          <div>
+            <div class="flex items-center gap-3 mb-8">
+              <div
+                class="w-10 h-10 bg-black text-white font-black text-xl flex items-center justify-center border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+              >
+                04
+              </div>
+              <h2
+                class="text-3xl font-black text-black uppercase tracking-tight"
+              >
+                Experience
+              </h2>
+            </div>
+
+            <div class="relative border-l-4 border-black ml-4 pl-6 space-y-8">
+              <!-- Item 1 -->
+              <div class="relative group">
+                <div
+                  class="absolute -left-[31px] top-1.5 w-4 h-4 bg-black border-2 border-black"
+                ></div>
+
+                <div class="brutal-card p-6">
+                  <span
+                    class="brutal-badge px-2.5 py-0.5 text-[10px] inline-block mb-2"
+                    >WORK EXPERIENCE</span
+                  >
+                  <h3 class="text-xl font-black text-black uppercase">
+                    Collaborator
+                  </h3>
+                  <p class="text-sm font-bold text-slate-700 mb-4">
+                    FSI Dalat, Lam Dong
+                  </p>
+
+                  <ul class="space-y-2 text-xs font-medium text-black">
+                    <li class="flex items-start gap-2">
+                      <i
+                        class="fa-solid fa-minus text-black font-bold mt-1"
+                      ></i>
+                      <span
+                        >Managed and organized office files and digital document
+                        repositories.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i
+                        class="fa-solid fa-minus text-black font-bold mt-1"
+                      ></i>
+                      <span
+                        >Assisted with precise data entry, document processing,
+                        and record verification.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i
+                        class="fa-solid fa-minus text-black font-bold mt-1"
+                      ></i>
+                      <span
+                        >Updated and maintained organizational records
+                        accurately under strict deadlines.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Certifications -->
+          <div>
+            <div class="flex items-center gap-3 mb-8">
+              <div
+                class="w-10 h-10 bg-black text-white font-black text-xl flex items-center justify-center border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+              >
+                05
+              </div>
+              <h2
+                class="text-3xl font-black text-black uppercase tracking-tight"
+              >
+                Certifications
+              </h2>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Cert 1 -->
+              <div class="brutal-card p-5 flex items-start gap-4">
+                <div
+                  class="w-12 h-12 bg-black text-white border-2 border-black flex items-center justify-center text-xl shrink-0 font-bold"
+                >
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <h3 class="text-base font-extrabold text-black uppercase">
+                      CCNA: Intro to Networks
+                    </h3>
+                    <span class="brutal-badge px-2 py-0.5 text-[10px]"
+                      >APR 2025</span
+                    >
+                  </div>
+                  <p class="text-xs font-mono font-bold text-slate-600 mb-2">
+                    Cisco Networking Academy
+                  </p>
+                  <p class="text-xs font-medium text-black leading-relaxed">
+                    IP Addressing, Subnetting, Ethernet, TCP/IP, LANs, Routing &
+                    Switching, Cisco Packet Tracer.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Cert 2 -->
+              <div class="brutal-card p-5 flex items-start gap-4">
+                <div
+                  class="w-12 h-12 bg-black text-white border-2 border-black flex items-center justify-center text-xl shrink-0 font-bold"
+                >
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <h3 class="text-base font-extrabold text-black uppercase">
+                      JS Algorithms & Data Structures
+                    </h3>
+                    <span class="brutal-badge px-2 py-0.5 text-[10px]"
+                      >JUL 2025</span
+                    >
+                  </div>
+                  <p class="text-xs font-mono font-bold text-slate-600 mb-2">
+                    freeCodeCamp
+                  </p>
+                  <p class="text-xs font-medium text-black leading-relaxed">
+                    JavaScript ES6, Data Structures, Sorting & Searching
+                    Algorithms, Object-Oriented Programming, Functional
+                    Programming.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Cert 3 -->
+              <div class="brutal-card p-5 flex items-start gap-4">
+                <div
+                  class="w-12 h-12 bg-black text-white border-2 border-black flex items-center justify-center text-xl shrink-0 font-bold"
+                >
+                  <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <h3 class="text-base font-extrabold text-black uppercase">
+                      Responsive Web Design
+                    </h3>
+                    <span class="brutal-badge px-2 py-0.5 text-[10px]"
+                      >AUG 2024</span
+                    >
+                  </div>
+                  <p class="text-xs font-mono font-bold text-slate-600 mb-2">
+                    freeCodeCamp
+                  </p>
+                  <p class="text-xs font-medium text-black leading-relaxed">
+                    HTML5, CSS3, Modern Responsive Layouts, Flexbox, CSS Grid,
+                    Web Accessibility Standards (a11y).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: CONTACT & GET IN TOUCH -->
+      <section id="contact" class="scroll-mt-28">
+        <div
+          class="brutal-card p-8 sm:p-12 text-center bg-black text-white shadow-[10px_10px_0px_0px_rgba(0,0,0,0.3)] border-4 border-black"
+        >
+          <span
+            class="brutal-badge bg-white text-black px-3 py-1 text-xs mb-4 inline-block font-bold uppercase"
+            >Let's Connect</span
+          >
+          <h2
+            class="text-3xl sm:text-5xl font-black uppercase mb-6 tracking-tight"
+          >
+            Ready to Work Together?
+          </h2>
+          <p
+            class="text-slate-300 max-w-xl mx-auto mb-10 text-sm sm:text-base font-medium leading-relaxed"
+          >
+            I am actively seeking an internship or junior Flutter Developer role
+            where I can contribute to real-world products and grow alongside an
+            engineering team.
+          </p>
+
+          <!-- Quick Actions Grid -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl mx-auto"
+          >
+            <!-- Copy Email Card -->
+            <button
+              onclick="copyToClipboard('dihieu2407@gmail.com')"
+              class="brutal-btn p-4 bg-white text-black flex items-center justify-between text-left hover:bg-slate-100"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 bg-black text-white flex items-center justify-center font-bold"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <span
+                    class="block text-[10px] font-mono font-bold text-slate-500 uppercase"
+                    >DIRECT EMAIL</span
+                  >
+                  <span class="text-xs font-mono font-extrabold text-black"
+                    >dihieu2407@gmail.com</span
+                  >
+                </div>
+              </div>
+              <i class="fa-regular fa-copy text-black"></i>
+            </button>
+
+            <!-- Phone / Zalo -->
+            <a
+              href="tel:+84823777631"
+              class="brutal-btn p-4 bg-white text-black flex items-center justify-between text-left hover:bg-slate-100"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 bg-black text-white flex items-center justify-center font-bold"
+                >
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <span
+                    class="block text-[10px] font-mono font-bold text-slate-500 uppercase"
+                    >PHONE / ZALO</span
+                  >
+                  <span class="text-xs font-mono font-extrabold text-black"
+                    >+84 823 777 631</span
+                  >
+                </div>
+              </div>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square text-xs text-black"
+              ></i>
+            </a>
+
+            <!-- GitHub Profile -->
+            <a
+              href="https://github.com/gsb-b60"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="brutal-btn p-4 bg-white text-black flex items-center justify-between text-left hover:bg-slate-100 sm:col-span-2 lg:col-span-1"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 bg-black text-white flex items-center justify-center font-bold"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div>
+                  <span
+                    class="block text-[10px] font-mono font-bold text-slate-500 uppercase"
+                    >GITHUB REPO</span
+                  >
+                  <span class="text-xs font-mono font-extrabold text-black"
+                    >github.com/gsb-b60</span
+                  >
+                </div>
+              </div>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square text-xs text-black"
+              ></i>
+            </a>
+          </div>
+
+          <!-- Toast Notification Container -->
+          <div
+            id="toast"
+            class="fixed bottom-6 right-6 brutal-card bg-black text-white text-xs px-5 py-3 shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] flex items-center gap-3 transition-all opacity-0 pointer-events-none translate-y-4 z-50"
+          >
+            <i class="fa-solid fa-check text-white font-black text-sm"></i>
+            <span id="toastMsg" class="font-mono font-bold"
+              >Copied to clipboard!</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PROJECT DETAIL MODAL -->
+    <div
+      id="projectModal"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200"
+    >
+      <div
+        class="brutal-card w-full max-w-2xl max-h-[85vh] overflow-y-auto bg-white p-6 sm:p-8 relative transform scale-95 transition-transform duration-200 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] border-4 border-black"
+        id="modalContainer"
+      >
+        <!-- Close Button -->
+        <button
+          onclick="closeModal()"
+          class="absolute top-6 right-6 w-10 h-10 bg-black text-white border-2 border-black flex items-center justify-center font-bold hover:bg-white hover:text-black transition-all"
+        >
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+
+        <!-- Dynamic Content Area -->
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="border-t-4 border-black bg-white py-8 text-center text-xs font-mono font-bold text-black"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
+        <p>© 2026 NGUYEN DINH HIEU.</p>
+        <p class="uppercase">FLUTTER • DART • SUPABASE • SQLITE</p>
+      </div>
+    </footer>
+
+    <script>
+      // Project Modal Details
+      const projectDetails = {
+        totoki: {
+          title: "Totoki Edu",
+          subtitle: "Flutter SQLite Vocabulary Application with Anki SRS",
+          period: "Nov 2025 - Jan 2026",
+          role: "Solo Architect & Lead Developer",
+          tech: [
+            "Flutter",
+            "Dart",
+            "SQLite",
+            "Provider",
+            "JSON Parsing",
+            "Anki .apkg Engine",
+          ],
+          description:
+            "Totoki Edu is an offline-first learning system designed for intense IELTS preparation and vocabulary retention through spaced repetition algorithms.",
+          architecture: [
+            "<b>Anki .apkg Import Pipeline:</b> Engineered an automated decompression and parser pipeline capable of extracting SQLite schemas and JSON metadata from .apkg files, mapping 20+ specialized fields seamlessly into local database tables.",
+            "<b>SM-2 Spaced Repetition Algorithm:</b> Implemented mathematical flashcard review intervals for long-term memory retention.",
+            "<b>Provider + 8 Specialized Mixins:</b> Designed clean lesson orchestration utilizing modular mixins for mini-games, flashcard sessions, and tracking state.",
+            "<b>3-Layer Offline Architecture:</b> Strict separation of Data Sources (SQLite), Repositories, and Presentation Layer for fast UI rendering.",
+          ],
+        },
+        ontrain: {
+          title: "OnTrain",
+          subtitle: "Flutter - Supabase Personal Trainer Booking System",
+          period: "Solo Project",
+          role: "Full-Stack Mobile Engineer",
+          tech: [
+            "Flutter",
+            "Supabase RPC",
+            "PostgreSQL",
+            "Provider DI",
+            "Type-safe Models",
+          ],
+          description:
+            "OnTrain bridges personal trainers and fitness clients, enabling seamless scheduling, atomic booking workflows, and automated commission structures.",
+          architecture: [
+            "<b>Atomic Supabase RPCs:</b> Built server-side SQL functions (RPCs) to handle complex double-booking prevention, atomic wallet balances, and instant updates.",
+            "<b>Dispute & Refund Workflows:</b> Designed state-machine workflows covering booking request, confirmation, cancellation windows, and platform fee distribution.",
+            "<b>Provider Dependency Injection:</b> Implemented scalable DI containers for service lazy-loading and dynamic state response.",
+            "<b>Type-safe Data Parsing:</b> Generated strict Dart models for PostgreSQL JSON responses to prevent runtime null errors.",
+          ],
+        },
+      };
+
+      // Modal Controls
+      function openModal(projectId) {
+        const data = projectDetails[projectId];
+        if (!data) return;
+
+        const modalContent = document.getElementById("modalContent");
+        modalContent.innerHTML = `
+                <div class="inline-block brutal-badge px-2.5 py-0.5 text-[10px] mb-2">${data.period} • ${data.role}</div>
+                <h3 class="text-2xl sm:text-3xl font-black text-black uppercase mb-1">${data.title}</h3>
+                <p class="text-xs font-mono font-bold text-slate-700 mb-6 border-b-2 border-black pb-2">${data.subtitle}</p>
+                
+                <p class="text-sm font-medium text-black leading-relaxed mb-6">${data.description}</p>
+                
+                <div class="mb-6">
+                    <h4 class="text-xs font-mono font-extrabold uppercase tracking-wider text-black mb-3">KEY TECHNICAL ARCHITECTURE</h4>
+                    <ul class="space-y-3 text-xs font-medium text-black">
+                        ${data.architecture
+                          .map(
+                            (item) => `
+                            <li class="border-2 border-black p-3 bg-slate-50 flex items-start gap-3 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                                <i class="fa-solid fa-code-branch text-black mt-0.5 font-bold"></i>
+                                <div>${item}</div>
+                            </li>
+                        `,
+                          )
+                          .join("")}
+                    </ul>
+                </div>
+
+                <div class="mb-6">
+                    <h4 class="text-xs font-mono font-extrabold uppercase tracking-wider text-black mb-3">APPLIED TECHNOLOGIES</h4>
+                    <div class="flex flex-wrap gap-2">
+                        ${data.tech.map((t) => `<span class="brutal-pill px-3 py-1 text-xs font-bold">${t}</span>`).join("")}
+                    </div>
+                </div>
+            `;
+
+        const modal = document.getElementById("projectModal");
+        const container = document.getElementById("modalContainer");
+        modal.classList.remove("opacity-0", "pointer-events-none");
+        container.classList.remove("scale-95");
+        container.classList.add("scale-100");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("projectModal");
+        const container = document.getElementById("modalContainer");
+        modal.classList.add("opacity-0", "pointer-events-none");
+        container.classList.remove("scale-100");
+        container.classList.add("scale-95");
+        document.body.style.overflow = "auto";
+      }
+
+      // Skills Matrix Filter
+      document.querySelectorAll(".skill-tab-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll(".skill-tab-btn").forEach((btn) => {
+            btn.classList.remove("bg-black", "text-white");
+            btn.classList.add("bg-white", "text-black");
+          });
+          button.classList.remove("bg-white", "text-black");
+          button.classList.add("bg-black", "text-white");
+
+          const category = button.getAttribute("data-category");
+          const cards = document.querySelectorAll(".skill-card");
+
+          cards.forEach((card) => {
+            if (
+              category === "all" ||
+              card.getAttribute("data-category") === category
+            ) {
+              card.style.display = "flex";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Clipboard Copy Helper
+      function copyToClipboard(text) {
+        const tempInput = document.createElement("input");
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+
+        const toast = document.getElementById("toast");
+        const toastMsg = document.getElementById("toastMsg");
+        toastMsg.innerText = `COPIED ${text} TO CLIPBOARD!`;
+
+        toast.classList.remove(
+          "opacity-0",
+          "pointer-events-none",
+          "translate-y-4",
+        );
+        toast.classList.add("opacity-100", "translate-y-0");
+
+        setTimeout(() => {
+          toast.classList.remove("opacity-100", "translate-y-0");
+          toast.classList.add(
+            "opacity-0",
+            "pointer-events-none",
+            "translate-y-4",
+          );
+        }, 3000);
+      }
+
+      // Mobile Drawer Toggle
+      const mobileBtn = document.getElementById("mobileMenuBtn");
+      const mobileDrawer = document.getElementById("mobileDrawer");
+      if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener("click", () => {
+          mobileDrawer.classList.toggle("hidden");
+          mobileDrawer.classList.toggle("flex");
+        });
+
+        document.querySelectorAll(".mobile-link").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileDrawer.classList.add("hidden");
+            mobileDrawer.classList.remove("flex");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
